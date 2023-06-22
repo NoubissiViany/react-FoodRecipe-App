@@ -1,3 +1,110 @@
+.modalHeader {
+  height: 50px;
+  background: white;
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.heading {
+  margin: 0;
+  padding: 10px;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+
+.modalContent {
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.modalContentLabel {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.modalContentsInput {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0 15px;
+  width: auto;
+}
+
+/* .modalContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-evenly;
+} */
+
+.modalContentContainer textarea {
+  border-radius: 5px;
+  margin-top: 10px;
+  width: auto;
+}
+
+.modalContentTextarea {
+  margin-bottom: 15px;
+}
+
+.react-responsive-modal-modal {
+  border-radius: 10px;
+}
+
+.actionsContainers {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.saveBtn {
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 11px 28px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: none;
+  color: #fff;
+  background: green;
+  transition: all 0.25s ease;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.saveBtn:hover {
+  box-shadow: 0 10px 20px -10px rgba(255, 62, 78, 0.6);
+  transform: translateY(-5px);
+  background: green;
+}
+
+.cancelBtn {
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 11px 28px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: none;
+  color: #fff;
+  background: #ff3e4e;
+  transition: all 0.25s ease;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.cancelBtn:hover {
+  box-shadow: 0 10px 20px -10px rgba(255, 62, 78, 0.6);
+  transform: translateY(-5px);
+  background: #ff3e4e;
+}
+
 .Btn {
   padding: 15px;
   border: none;
@@ -8,8 +115,26 @@
   font-weight: bold;
   margin-right: 25px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .Btn:hover {
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 425px) {
+  .Btn {
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-inline: auto;
+    /*  border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: green;
+    font-weight: bold;
+    margin-right: 25px;
+    cursor: pointer;
+    white-space: nowrap; */
+  }
 }
