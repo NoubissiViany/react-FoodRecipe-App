@@ -34,13 +34,6 @@
   width: auto;
 }
 
-/* .modalContentContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: space-evenly;
-} */
-
 .modalContentContainer textarea {
   border-radius: 5px;
   margin-top: 10px;
@@ -111,7 +104,7 @@
   border-radius: 5px;
   font-size: 16px;
   color: white;
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.884);
   font-weight: bold;
   margin-right: 25px;
   cursor: pointer;
@@ -119,7 +112,7 @@
 }
 
 .Btn:hover {
-  transform: scale(1.1);
+  background-color: rgb(4, 90, 4);
 }
 
 @media screen and (max-width: 425px) {
@@ -127,14 +120,5 @@
     padding: 15px;
     margin-bottom: 20px;
     margin-inline: auto;
-    /*  border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    color: white;
-    background-color: green;
-    font-weight: bold;
-    margin-right: 25px;
-    cursor: pointer;
-    white-space: nowrap; */
   }
 }
