@@ -176,11 +176,19 @@ function Home() {
                   )
                   .map((item, id) => (
                     <div className="bodyContent" key={id}>
-                      <img src={item.FoodImage} alt="Food_Image" />
-                      <div className="overlay">
-                        <div className="text">
-                          <p> Description : {item.Description}</p>
-                          <p> Ingredient : {item.Ingredients}</p>
+                      <div className="container">
+                        <img src={item.FoodImage} alt="Food_Image" />
+                        <div className="overlay">
+                          <div className="recipeDetailContainer">
+                            <div className="recipeDetail">
+                              <p>Description : </p>
+                              <span>{item.Description}</span>
+                            </div>
+                            <div className="recipeDetail">
+                              <p>Ingredient : </p>
+                              <span>{item.Ingredients}</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div className="bodyContent-description">
@@ -191,15 +199,18 @@ function Home() {
                             className={
                               item.favorite === 'yes'
                                 ? 'red-icon fa-solid fa-heart'
-                                : 'black-icon fa-solid fa-heart'
+                                : 'black-icon fa-regular fa-heart'
                             }
                           />
                           <i
-                            onClick={editRecipe}
+                            onClick={() => editRecipe(item.id)}
                             className="edit-icon fa-solid fa-pen-to-square"
                           />
                           <i
-                            onClick={() => setOpen2(true)}
+                            onClick={() => {
+                              setOpen2(true);
+                              setItemId(item.id);
+                            }}
                             className="delete-icon fa-solid fa-trash-can"
                           />
                         </div>
