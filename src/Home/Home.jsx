@@ -221,7 +221,7 @@ function Home() {
             {/* Edit Recipe Modal */}
             <Modal open={open1} onClose={onCloseModal1} center>
               <div className="modalHeader">
-                <h5 className="heading">Add a new recipe!</h5>
+                <h5 className="heading">Eddit recipe!</h5>
               </div>
               <form onSubmit={handelSubmit}>
                 <div className="modalContent">
