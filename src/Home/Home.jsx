@@ -1,8 +1,4 @@
-/* eslint-disable no-console */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/jsx-no-constructed-context-values */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import Button1 from '../Buttons/Button1/Button1';
@@ -83,8 +79,6 @@ function Home() {
     setOpen1(false);
   };
 
-  console.log(editRec);
-
   const DeleteRecipe = (id) => {
     const deleteRecipe = items.filter((del) => {
       return del.id !== id;
@@ -95,6 +89,8 @@ function Home() {
     window.location.reload(true);
   };
 
+  const itemsProvider = useMemo(() => ({ items, setItems }), []);
+
   useEffect(() => {
     localStorage.setItem('items', JSON.stringify(items));
     setSearchRecipe('');
@@ -102,7 +98,7 @@ function Home() {
   }, [items, val, favorite]);
 
   return (
-    <formContext.Provider value={{ items, setItems }}>
+    <formContext.Provider value={itemsProvider}>
       <div className="body">
         <header className="Header">
           <div className="Header-h1">
@@ -146,6 +142,7 @@ function Home() {
                       <div className="bodyContent-icons">
                         <i
                           onClick={() => FavoriteRecipe(item.id)}
+                          aria-hidden
                           className={
                             item.favorite === 'yes'
                               ? 'red-icon fa-solid fa-heart'
@@ -154,6 +151,7 @@ function Home() {
                         />
                         <i
                           onClick={() => editRecipe(item.id)}
+                          aria-hidden
                           className="edit-icon fa-solid fa-pen-to-square"
                         />
                         <i
@@ -161,6 +159,7 @@ function Home() {
                             setOpen2(true);
                             setItemId(item.id);
                           }}
+                          aria-hidden
                           className="delete-icon fa-solid fa-trash-can"
                         />
                       </div>
@@ -195,6 +194,7 @@ function Home() {
                         <div className="bodyContent-icons">
                           <i
                             onClick={() => FavoriteRecipe(item.id)}
+                            aria-hidden
                             className={
                               item.favorite === 'yes'
                                 ? 'red-icon fa-solid fa-heart'
@@ -203,6 +203,7 @@ function Home() {
                           />
                           <i
                             onClick={() => editRecipe(item.id)}
+                            aria-hidden
                             className="edit-icon fa-solid fa-pen-to-square"
                           />
                           <i
@@ -210,6 +211,7 @@ function Home() {
                               setOpen2(true);
                               setItemId(item.id);
                             }}
+                            aria-hidden
                             className="delete-icon fa-solid fa-trash-can"
                           />
                         </div>
