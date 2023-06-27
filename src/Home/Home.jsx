@@ -231,7 +231,7 @@ function Home() {
                       <input
                         name="RecipeName"
                         className="modalContentsInput"
-                        placeholder="Please enter food name"
+                        placeholder="Please enter recipe name"
                         type="text"
                         id="RecipeName"
                         defaultValue={editRec.RecipeName}
@@ -245,7 +245,7 @@ function Home() {
                       <input
                         name="FoodImage"
                         className="modalContentsInput"
-                        placeholder="Please enter food image URL"
+                        placeholder="Please enter recipe image URL"
                         type="text"
                         id="FoodImage"
                         defaultValue={editRec.FoodImage}
@@ -264,7 +264,7 @@ function Home() {
                         rows="3"
                         defaultValue={editRec.Description}
                         required
-                        placeholder="Enter food description"
+                        placeholder="Enter recipe description"
                       />
                     </label>
                   </div>
@@ -278,7 +278,7 @@ function Home() {
                         rows="3"
                         required
                         defaultValue={editRec.Ingredients}
-                        placeholder="Enter food ingredients"
+                        placeholder="Enter recipe ingredients"
                       />
                     </label>
                   </div>
