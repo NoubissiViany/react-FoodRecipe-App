@@ -1,0 +1,208 @@
+* {
+  overflow-x: hidden;
+}
+
+.body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://t3.ftcdn.net/jpg/03/46/14/30/360_F_346143059_HJSSw7TxF0C7SnZcrXYN2vR7DHHOCOxJ.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: center;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(30, 143, 255);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.Header-h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 5px 25px;
+  white-space: nowrap;
+}
+
+.Header-h1 button {
+  padding: 16px;
+  border: none;
+  font-size: 16px;
+  color: white;
+  background-color: slateblue;
+  font-weight: bold;
+  margin-left: -2px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.Header-h1 button:hover {
+  background-color: rgba(71, 61, 139, 0.795);
+}
+
+.Header h1 {
+  color: white;
+  font-weight: bold;
+}
+
+.headerInput {
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  width: 50%;
+}
+
+.bodyContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bodyContent-container {
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.bodyContent {
+  background-color: rgba(245, 245, 245, 0.979);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+}
+
+.bodyContent img {
+  width: 295px;
+  height: 15rem;
+}
+
+.bodyContent img:hover {
+  transform: scale(1.1);
+}
+
+.bodyContent p {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bodyContent-description {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.bodyContent-description i {
+  font-size: 25px;
+}
+
+.bodyContent-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.black-icon:hover {
+  color: blue;
+}
+
+.red-icon {
+  color: blue;
+}
+
+.delete-icon:hover {
+  color: red;
+}
+
+.edit-icon:hover {
+  color: green;
+}
+
+.deleteAlert {
+  text-align: center;
+  margin-top: 42px;
+  line-height: 30px;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.671);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.recipeDetailContainer {
+  margin-top: 2%;
+}
+
+.recipeDetail {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipeDetail p {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.recipeDetail span {
+  color: white;
+  margin-top: -10px;
+  word-wrap: break-word;
+  width: 100%;
+  padding-inline: 7px;
+}
+
+@media screen and (max-width: 425px) {
+  .Header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Header-h1 {
+    flex-direction: column;
+    gap: 0;
+  }
+  .Header h1 {
+    width: 100%;
+  }
+  .headerInput {
+    width: 55%;
+  }
+  .bodyContent-container {
+    margin-top: 245px;
+  }
+}
