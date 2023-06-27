@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-no-constructed-context-values */
-/* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
@@ -125,8 +124,8 @@ function Home() {
         <div className="bodyContainer">
           <div className="bodyContent-container">
             {searchRecipe === ''
-              ? [...items].map((item, id) => (
-                  <div className="bodyContent" key={id}>
+              ? [...items].map((item) => (
+                  <div className="bodyContent" key={item.id}>
                     <div className="container">
                       <img src={item.FoodImage} alt="Food_Image" />
                       <div className="overlay">
@@ -174,8 +173,8 @@ function Home() {
                       search.RecipeName.toLowerCase() ===
                       searchRecipe.toLowerCase()
                   )
-                  .map((item, id) => (
-                    <div className="bodyContent" key={id}>
+                  .map((item) => (
+                    <div className="bodyContent" key={item.id}>
                       <div className="container">
                         <img src={item.FoodImage} alt="Food_Image" />
                         <div className="overlay">
